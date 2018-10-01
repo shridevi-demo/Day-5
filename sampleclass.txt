@@ -1,0 +1,28 @@
+public class PaymentPlayBackListener {
+    //..
+
+    ..
+    public void listen(String Payload, String key, int partition, String topic, long ts) {
+
+        //../
+        try {
+            if (getRequestFlowStates().contains(key)) {
+                eventFlowProcessor.requestResponseFlow(paymentInitWrapper);
+            } else {
+
+            }
+        } catch() {
+
+        }
+    }
+}
+
+
+1. For which key, eventFlowProcessor.requestResponseFlow() will be called
+2. For which key, eventFlowProcessor.routerFlow() will be called
+3. For which key, eventFlowProcessor.responseFlow() will be called
+4. For which key, eventFlowProcessor.requestResponseFlow() should not be called
+5. For which key, eventFlowProcessor.routerFlow() should not be called
+6. For which key, eventFlowProcessor.responseFlow() should not be called
+7. For which key, nothing should be called
+8. For which payload, nothing should be called <-- some random string in payload.
